@@ -270,7 +270,7 @@ body{
   right: -150px;
   width: 60%;
   height: 100%;
-  background-image: url('/images/tren.png');
+  background-image: url('images/tren.png');
   background-size: contain; /* Ajusta la imagen completamente dentro del contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen */
@@ -284,7 +284,7 @@ body{
   left: -150px;
   width: 60%;
   height: 80%;
-  background-image: url('/images/soldado01.png');
+  background-image: url('images/soldado01.png');
   background-size: contain; /* Ajusta la imagen completamente dentro del contenedor */
   background-repeat: no-repeat; /* Evita que la imagen se repita */
   background-position: center; /* Centra la imagen */
