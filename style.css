@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body{
+    margin :0;
+    background-color: #210002;
+    font-family: Poppins;
+    font-size: 15px;
+}
+.banner{
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.banner .bg{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-size: auto 100%;
+  background-position: center bottom;
+  transition: 0.1s;
+}
+.banner .bg-1{
+  background-image: url('images/0.png');
+}
+.banner .bg-2{
+  background-image: url('images/1.png');
+}
+.banner .bg-3{
+  background-image: url('images/2.png');
+}
+.banner .bg-4{
+  background-image: url('images/3.png');
+}
+.banner .bg-5{
+  background-image: url('images/4.png');
+}
+.banner .bg-6{
+  background-image: url('images/5.png');
+}
+.banner .bg-7{
+  background-image: url('images/6.png');
+}
+.banner .bg-8{
+  background-image: url('images/7.png');
+}
+.banner .bg-9{
+  background-image: url('images/8.png');
+}
+.banner  h1{
+  position: absolute;
+  top: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 9rem;
+  font-family: 'Pacifico', cursive;
+  color: #fff;
+  animation: float 3s ease-in-out infinite;
+}
+.intro{
+  min-height: 50vh;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.intro img{
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+.intro p{
+  width: 700px;
+  max-width: 100%;
+  text-align: center;
+}
+.intro button{
+  background-color: #FD0003;
+  padding: 10px 50px;
+  border: 1px solid #591F1D;
+  border-radius: 5px;
+  color: #fff;
+  font-family: Poppins;
+  font-weight: 500;
+}
+.animation-show{
+  transform: translateY(50px);
+  opacity: 0;
+  transition: 0.7s;
+}
+.active .animation-show{
+  transform: translateY(0);
+  opacity: 1;
+}
+.animation-show:nth-child(2){
+  transition-delay: 0.3s;
+}
+.animation-show:nth-child(3){
+  transition-delay: 0.6s;
+}
+.animation-show:nth-child(4){
+  transition-delay: 0.9s;
+}
+.library{
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  color: #fff;
+}
+.library img{
+  width: 90%;
+  height: 500px;
+  object-fit: cover;
+}
+@media screen and (max-width: 768px){
+  .banner h1{
+      font-size: 5rem;
+  }
+  .library{
+      grid-template-columns: repeat(2, 1fr);
+  }
+  .library img{
+      height: 300px;
+  }
+  #mision-vision h2, h3, p {
+    font-size: 1rem;
+  }
+}
+
+/* Timeline Styles */
+#cronograma {
+  position: relative;
+  background: linear-gradient(120deg, #210002, #210002, #210002);
+  color: #fff;
+  overflow: hidden;
+}
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 20px auto;
+  position: relative;
+  color: #000000;
+  z-index: 2;
+}
+
+.timeline__event {
+  margin-bottom: 10px;
+  position: relative;
+  display: flex;
+  margin: 20px 0;
+  border-radius: 6px;
+  align-self: center;
+  width: 60vw;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.timeline__event--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timeline__event:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+
+.timeline__event:nth-child(1) .timeline__event__icon,
+.timeline__event:nth-child(1) .timeline__event__date {
+  background: #9251ac;
+}
+
+.timeline__event:nth-child(2) .timeline__event__icon,
+.timeline__event:nth-child(2) .timeline__event__date {
+  background: #f6a4ec;
+}
+
+.timeline__event:nth-child(3) .timeline__event__icon,
+.timeline__event:nth-child(3) .timeline__event__date {
+  background: #87bbfe;
+}
+
+.timeline__event:nth-child(4) .timeline__event__icon,
+.timeline__event:nth-child(4) .timeline__event__date {
+  background: #555ac0;
+}
+
+.timeline__event:nth-child(5) .timeline__event__icon,
+.timeline__event:nth-child(5) .timeline__event__date {
+  background: #24b47e;
+}
+
+.timeline__event:nth-child(6) .timeline__event__icon,
+.timeline__event:nth-child(6) .timeline__event__date {
+  background: #aff1b6;
+}
+
+.timeline__event__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 20px;
+  align-self: center;
+  margin: 0 20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.timeline__event__date {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 10px;
+  border-radius: 6px 0 0 6px;
+}
+
+.timeline__event__content {
+  padding: 20px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+              0 18px 36px -18px rgba(0, 0, 0, 0.3);
+  background: #fff;
+  color: #333;
+  width: calc(40vw - 84px);
+  border-radius: 0 6px 6px 0;
+}
+
+.timeline__event__title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #9251ac;
+}
+
+.timeline__event__description {
+  margin-top: 10px;
+}
+
+/* Floating animation */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Floating background images */
+.floating-image {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.floating-image-right {
+  top: 10%;
+  right: -150px;
+  width: 60%;
+  height: 100%;
+  background-image: url('/images/tren.png');
+  background-size: contain; /* Ajusta la imagen completamente dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  animation: float-left 6s infinite;
+  filter: drop-shadow(50px 10px 20px rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+.floating-image-left {
+  top: 15%;
+  left: -150px;
+  width: 60%;
+  height: 80%;
+  background-image: url('/images/soldado01.png');
+  background-size: contain; /* Ajusta la imagen completamente dentro del contenedor */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-position: center; /* Centra la imagen */
+  animation: float-left 6s infinite;
+  filter: drop-shadow(50px 10px 20px rgba(0, 0, 0, 0.5));
+  z-index: 1;
+}
+
+/* Floating animations for images */
+@keyframes float-right {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes float-left {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 786px) {
+  .floating-image.floating-image-right {
+    top: 50%; /* Posiciona en el centro vertical */
+    left: 50%; /* Posiciona en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el elemento perfectamente */
+    width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
+    height: 200px;
+  }
+  .floating-image.floating-image-left {
+    top: 50%; /* Posiciona en el centro vertical */
+    left: 0%; /* Posiciona en el centro horizontal */
+    transform: translate(-50%, -50%); /* Centra el elemento perfectamente */
+    width: 200px; /* Ajusta el tamaño para pantallas pequeñas */
+    height: 200px;
+  }
+  .timeline__event:nth-child(2n + 1) {
+    flex-direction: column; /* Coloca el contenido en una columna vertical */
+  }
+  .timeline__event {
+      flex-direction: column; /* Alinea todos los elementos en columna */
+      align-self: center;
+      width: 100%; /* Ocupa todo el ancho disponible */
+      margin: 10px 0; /* Añade un pequeño margen entre eventos */
+  }
+
+  .timeline__event__content {
+      width: 100%; /* Hace que el contenido ocupe el ancho completo */
+      border-radius: 6px; /* Bordes redondeados */
+  }
+
+  .timeline__event__date {
+      border-radius: 6px 6px 0 0; /* Bordes superiores redondeados */
+  }
+  
+  .timeline__event__icon {
+      margin: 0 auto 10px auto; /* Centra los íconos y agrega espacio inferior */
+      width: 60px; /* Ajusta el tamaño del ícono */
+      height: 60px;
+  }
+}
+
+
+
+
+/* mapa style */
+#mapa{
+  background: linear-gradient(120deg, #210002, #210002, #210002);
+}
+.map-container{
+  position: relative;
+  background: linear-gradient(120deg, #210002, #210002, #210002);
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+}
+#map {
+  width: 90%;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-left: 5%;
+}
+.container {
+  
+  color: #fff;
+  text-align: center;
+
+}
+
+/* resumen */
+#resumen {
+  position: relative;
+  background: linear-gradient(120deg, #210002, #210002, #210002);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* testimonios */
+#testimonios {
+  position: relative;
+  background: linear-gradient(120deg, #210002, #210002, #210002);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Sección Testimonios */
+.testimonios-section{
+  background: linear-gradient(135deg, #1c1c1c, #292929);
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Título principal */
+.section-title {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ffaf7b;
+}
+
+/* Contenedor de testimonios */
+.testimonios-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Tarjeta */
+.card {
+  padding: 1rem;
+  overflow: hidden;
+  border: 1px solid #c5c5c5;
+  border-radius: 12px;
+  background-color: #d9d9d92f;
+  backdrop-filter: blur(8px);
+  min-width: 344px;
+  max-width: 400px;
+}
+
+.terminal {
+  display: flex;
+  flex-direction: column;
+  font-family: ui-monospace, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+/* Encabezado del terminal */
+
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #ffaf7b;
+}
+
+/* Efecto de escritura */
+.typing-effect {
+  position: relative;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+/* Cursor parpadeante */
+.typing-effect::after {
+  content: "";
+  display: inline-block;
+  width: 0.1em;
+  height: 1em;
+  background-color: #e34ba9;
+  animation: blink 0.7s step-end infinite;
+  vertical-align: -2px;
+}
+
+/* Animación de escritura */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    background-color: transparent;
+  }
+}
+
+
+/* formulario */
+#formulario {
+  position: relative;
+  background: linear-gradient(120deg, #210002, #210002, #210002);
+  color: #fff;
+  overflow: hidden;
+}
+
+/* barra de navegacion */
+/* Estilos generales para la navbar */
+.custom-navbar {
+  background: rgba(33, 37, 41, 0.9); /* Color de fondo oscuro con transparencia */
+  transition: background 0.3s ease;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  height: 75px; /* Altura fija */
+  line-height: 75px; /* Centrado vertical del contenido */
+  display: flex;
+    align-items: center; 
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+  color: #f8f9fa;
+  display: flex;
+  align-items: center;
+}
+
+.custom-navbar .nav-link {
+  color: #f8f9fa;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffaf7b; /* Color al pasar el mouse */
+}
+
+/* Iconos */
+.custom-navbar i {
+  color: #d35603; /* Color de los iconos */
+}
+
+/* Fondo transparente en el menú colapsado (móviles) */
+@media (max-width: 992px) {
+  .custom-navbar .navbar-collapse {
+      background: rgba(33, 37, 41, 0.8); /* Fondo oscuro transparente */
+      padding: 10px;
+      border-radius: 10px;
+      text-align: center;
+  }
+ 
+  .navbar-brand {
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra el logo */
+    font-size: 1.3rem; /* Ajusta el tamaño del logo */
+}
+  .navbar-toggler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+
+  .nav-link {
+        padding: 15px 0; /* Espaciado entre enlaces */
+        font-size: 1.5rem; /* Aumenta el tamaño del texto */
+    }
+
+}
+
+/* Ajuste para el botón de toggler */
+.navbar-toggler {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  margin: 0 auto; /* Centra el botón horizontalmente */
+}
+
+.navbar-toggler-icon .nav-item{
+  width: 2rem; /* Ajusta el tamaño del ícono */
+    height: 2rem;
+  filter: brightness(0) invert(1); /* Color blanco para el ícono */
+}
+
+/* Efecto flotante (navbar fixed en la parte superior) */
+.fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+.navbar-brand {
+  margin: 0 auto; /* Centra el logo */
+  font-size: 1.5rem; /* Ajusta el tamaño del texto del logo */
+}
+
+/* Margen para el contenido debajo del menú */
+body {
+  padding-top: 75px; /* Ajusta para evitar que el contenido quede oculto detrás del menú fijo */
+}
+

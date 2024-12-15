@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cultura Viva Oruro</title>
+    <link rel="icon" href="images/logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/Logo.png" alt="Logo" width="50" class="me-2">
+                Cultura Viva Oruro
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mision-vision">Misión y Visión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#resumen">Resumen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cronograma">Cronograma</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+    <div class="container">
+        <!-- Logo -->
+        <a class="navbar-brand" href="#">
+            <img src="images/Logo.png" alt="Logo" width="60" class="me-2">
+            Cultura Viva Oruro
+        </a>
+        <!-- Botón de menú en móviles -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Menú -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- <li class="nav-item">
+                    <a class="nav-link active" href="#">
+                        <i class="fas fa-home me-1"></i> Inicio
+                    </a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="#mision-vision">
+                        <i class="fas fa-bullseye me-1"></i> Misión y Visión
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#resumen">
+                        <i class="fas fa-book me-1"></i> Resumen
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#cronograma">
+                        <i class="fas fa-calendar-alt me-1"></i> Cronograma
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#mapa">
+                        <i class="fas fa-map-marked-alt me-1"></i> Mapa
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonios">
+                        <i class="fas fa-comments me-1"></i> Testimonios
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#formulario">
+                        <i class="fas fa-envelope me-1"></i> Formulario
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Parallax Banner -->
+    <div class="banner">
+        <div class="bg bg-1"></div>
+        <div class="bg bg-2"></div>
+        <div class="bg bg-3"></div>
+        <h1>3 pasos al frente</h1>
+        <div class="bg bg-4"></div>
+        <div class="bg bg-5"></div>
+        <div class="bg bg-6"></div>
+        <div class="bg bg-7"></div>
+        <div class="bg bg-8"></div>
+        <div class="bg bg-9"></div>
+    </div>
+
+    <!-- Misión y Visión -->
+    <section id="mision-vision" class="tab intro text-center my-4">
+        
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-md-4">
+                    <h3 class="section-title">Misión</h3>
+                    <p>Fomentar el turismo cultural y sostenible en Oruro, promoviendo sus tradiciones, paisajes y riqueza histórica.</p>
+                </div>
+                <div class="col-md-4">
+                    <img src="images/logo.png" alt="Logo" width="100" class="mx-4"> <!-- Ajusta el tamaño según sea necesario -->
+                </div>
+                
+                <div class="col-md-4">
+                    <h3 class="section-title">Visión</h3>
+                    <p>Ser la agencia de turismo líder en Bolivia, reconocida por su compromiso con la cultura viva, la excelencia en el servicio y el impacto positivo en las comunidades locales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resumen -->
+    <section id="resumen" class="tab bg-light py-5">
+        <div class="container">
+            <h2 class="section-title" class="text-center mb-4">Resumen</h2>
+            <p class="text-center">Descubre los lugares históricos relacionados con la Guerra del Chaco en la ciudad de Oruro, un recorrido lleno de memoria y valor.</p>
+
+        </div>
+    </section>
+
+    <!-- Cronograma -->
+    <section id="cronograma" class="tab bg-light py-5">
+        <div class="container">
+            <h2 class="section-title" class="text-center mb-4">Cronograma</h2>
+            <p class="text-center">Descubre los lugares históricos relacionados con la Guerra del Chaco en la ciudad de Oruro, un recorrido lleno de memoria y valor.</p>
+            <div class="timeline">
+                <div class="timeline__event">
+                    <div class="timeline__event__icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    
+                    <div class="timeline__event__date">7:00 AM</div>
+                    <div class="timeline__event__content">
+                        <div class="timeline__event__title">Colegio Bolivar</div>
+                        <div class="timeline__event__description">
+                            <p>Punto de inicio del recorrido colegio Bolivar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__event">
+                    <div class="timeline__event__icon">
+                        <i class="fa-solid fa-church"></i>
+                    </div>
+                    
+                    <div class="timeline__event__date">8:00 AM</div>
+                    <div class="timeline__event__content">
+                        <div class="timeline__event__title">Casa de las Nazarias</div>
+                        <div class="timeline__event__description">
+                            <p>Un emblema de la historia local y su conexión con el conflicto.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__event">
+                    <div class="timeline__event__icon">
+                        <i class="fa-solid fa-train-subway"></i>
+                    </div>
+                    
+                    <div class="timeline__event__date">9:00 AM</div>
+                    <div class="timeline__event__content">
+                        <div class="timeline__event__title">Estacion de Trenes</div>
+                        <div class="timeline__event__description">
+                            <p>Testigo de la logística durante la guerra y despedida de los soldados.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline__event">
+                    <div class="timeline__event__icon">
+                        <i class="fa-solid fa-cross"></i>
+                    </div>
+                    
+                    <div class="timeline__event__date">10:00 AM</div>
+                    <div class="timeline__event__content">
+                        <div class="timeline__event__title">Cementerio General</div>
+                        <div class="timeline__event__description">
+                            <p>Punto final del recorrido, recuerdo de los caidos.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Floating background images -->
+        <div class="floating-image floating-image-right"></div>
+        <div class="floating-image floating-image-left"></div>
+    </section>
+    
+
+    <!-- Mapa Recorrido -->
+    <section id="mapa" class="tab bg-light py-5">
+        <div class="map-container">
+            <h2 class="section-title" class="text-center mb-4">Mapa del Recorrido</h2>
+            <p class="text-center">Visualiza los puntos del recorrido y la ruta que conecta cada lugar histórico.</p>
+            <div id="map" style="height: 500px;"></div>
+        </div>
+    </section>
+
+
+    <!-- Testimonios -->
+    <!-- Testimonios -->
+<section id="testimonios" class="testimonios-section">
+    <h2 class="section-title">Testimonios</h2>
+    <div class="testimonios-container">
+      <!-- Testimonio 1 -->
+      <div class="card">
+        <div class="wrap">
+          <div class="terminal">
+            <hgroup class="head">
+              <p class="title">
+                <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M7 15L10 12L7 9M13 15H17"></path>
+                </svg>
+                Juan Pérez
+              </p>
+            </hgroup>
+            <div class="body">
+              <p class="typing-effect" data-text="Lleno de cultura y tradiciones."></p>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Testimonio 2 -->
+      <div class="card">
+        <div class="wrap">
+          <div class="terminal">
+            <hgroup class="head">
+              <p class="title">
+                <svg width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                  <path d="M7 15L10 12L7 9M13 15H17"></path>
+                </svg>
+                María López
+              </p>
+            </hgroup>
+            <div class="body">
+              <p class="typing-effect" data-text="Oruro es mágico."></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    
+    
+    <section id="formulario" class="tab py-5">
+        <div class="container">
+            <h2 class="section-title" class="text-center mb-4">Formulario de Contacto</h2>
+            <p class="text-center">Llena este formulario para contactarnos o enviarnos tus comentarios.</p>
+            <div class="ratio ratio-16x9">
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeoq1SnnwzQ8RF7y8vRhrfF0y5CDv_wzThdOOSbyb4tGpSnRQ/viewform?usp=dialog" 
+                    width="500" 
+                    height="480" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0">Cargando…</iframe>
+            </div>
+        </div>
+    </section>
+    
+
+    <footer class="py-2 bg-dark text-center text-white">
+        <p>Desarrollado por QQSoft &copy; 2024 - Cultura Viva Oruro</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <!-- Bootstrap Bundle con Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
