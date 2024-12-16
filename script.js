@@ -62,8 +62,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     const points = [
         { lat: -17.97177350794686, lng: -67.11495882046685, title: "Colegio Bolivar" },
         { lat: -17.97167811464972, lng: -67.11407343965755, title: "Casa de las Nazarias" },
-        { lat: -17.973762614633124, lng: -67.11003118183274, title: "Estación de Trenes" },
-        { lat: -17.979738294817757, lng: -67.11063480459056, title: "Cementerio" },
+        // { lat: -17.973762614633124, lng: -67.11003118183274, title: "Estación de Trenes" },
+        { lat: -17.97413591521236, lng: -67.11049844438811, title: "Estación de Trenes" },
+        
+        // { lat: -17.979738294817757, lng: -67.11063480459056, title: "Cementerio" },
+        { lat: -17.98009385257712, lng: -67.11137046849025, title: "Cementerio" },
     ];
 
     points.forEach(point => {
@@ -77,9 +80,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pointsW = [
         { lat: -17.97177350794686, lng: -67.11495882046685, title: "Colegio Bolivar" },
         { lat: -17.97167811464972, lng: -67.11407343965755, title: "Casa de las Nazarias" },
-        { lat: -17.973762614633124, lng: -67.11003118183274, title: "Estación de Trenes" },
+        { lat: -17.97413591521236, lng: -67.11049844438811, title: "Estación de Trenes" },
+        { lat: -17.97437031877658, lng: -67.11061400242423, title: "Soria" },
         { lat: -17.976228268994873, lng: -67.11117582381388, title: "Soria" },
-        { lat: -17.979738294817757, lng: -67.11063480459056, title: "Cementerio" },
+        { lat: -17.977573339056338, lng: -67.11146608394613, title: "Soria" },
+        { lat: -17.978571395390617, lng: -67.1117525916918, title: "Soria" },
+        { lat: -17.98012509595587, lng: -67.1114251542581, title: "Cementerio" },
     ];
 
     const colors = ['blue', 'red', 'green', 'purple']; // Colores para cada tramo
