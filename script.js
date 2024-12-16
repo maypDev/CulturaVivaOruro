@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         { lat: -17.98012509595587, lng: -67.1114251542581, title: "Cementerio" },
     ];
 
-    const colors = ['blue', 'red', 'green', 'purple']; // Colores para cada tramo
+    const colors = ['blue']; // Colores para cada tramo
 
     for (let i = 0; i < pointsW.length - 1; i++) {
         const start = `${pointsW[i].lng},${pointsW[i].lat}`;
